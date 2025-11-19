@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Números Lotéricos - Baseado em Estatísticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Gerador de Números Lotéricos</h1>
+            <p>Bem-vindo! Escolha seu jogo e deixe a estatística dos últimos 10 anos te ajudar a definir seus números!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="intro">
+            <h2>Como Funciona?</h2>
+            <p>Este gerador utiliza análise estatística de sorteios passados para sugerir números com maior frequência de ocorrência. Embora nenhum sistema garanta ganhos, este é um método baseado em dados reais. Selecione a loteria desejada e comece!</p>
+        </section>
+
+        <section id="game-selector">
+            <h2>1. Escolha a Loteria</h2>
+            <div class="game-grid">
+                <!-- Os data-attributes guardam as regras de cada jogo -->
+                <div class="game-card" data-game="mega-sena" data-total-numbers="60" data-picks="6">Mega-Sena</div>
+                <div class="game-card" data-game="lotofacil" data-total-numbers="25" data-picks="15">Lotofácil</div>
+                <div class="game-card" data-game="quina" data-total-numbers="80" data-picks="5">Quina</div>
+                <div class="game-card" data-game="lotomania" data-total-numbers="100" data-picks="50">Lotomania</div>
+                <div class="game-card" data-game="timemania" data-total-numbers="80" data-picks="10">Timemania</div>
+                <div class="game-card" data-game="dupla-sena" data-total-numbers="50" data-picks="6">Dupla Sena</div>
+                <div class="game-card" data-game="loteria-federal" data-total-numbers="0" data-picks="0" data-special="true">Loteria Federal</div>
+                <div class="game-card" data-game="loteca" data-total-numbers="0" data-picks="0" data-special="true">Loteca</div>
+                <div class="game-card" data-game="dia-de-sorte" data-total-numbers="31" data-picks="7">Dia de Sorte</div>
+                <div class="game-card" data-game="super-sete" data-total-numbers="10" data-picks="7" data-special="true">Super Sete</div>
+            </div>
+        </section>
+
+        <section id="config-panel" class="hidden">
+            <h2>2. Configure sua Aposta</h2>
+            <p>Defina quantos números você deseja gerar para <strong id="game-name-display"></strong> e clique no botão.</p>
+            <div class="controls">
+                <label for="quantity">Quantidade de números:</label>
+                <input type="number" id="quantity" value="6" min="1" max="50">
+                <button id="generate-button">Gerar Números</button>
+            </div>
+        </section>
+
+        <section id="results-panel" class="hidden">
+            <h2>3. Seus Números da Sorte!</h2>
+            <div id="results-container">
+                <!-- Os números gerados aparecerão aqui -->
+            </div>
+        </section>
+
+        <section id="stats-info">
+            <h2>Informações Estatísticas</h2>
+            <p>Baseado em análise dos últimos 10 anos: nosso sistema prioriza números que mais saem, evita os que menos saem e considera tendências recentes para gerar suas sugestões.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>⚠️ Aviso Legal: Este gerador é uma ferramenta de entretenimento e estudo. Loterias são jogos de azar e nenhum sistema pode garantir resultados. Jogue com responsabilidade.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>```
